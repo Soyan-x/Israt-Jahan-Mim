@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta name="theme-color" content="#05000a">
+
+    <meta
+        name="description"
+        content="A special message from my heart to Israt Jaha Mim ❤️"
+    >
+
+    <title>For Israt Jaha Mim ❤️</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+
+<body>
+
+    <!-- =========================================
+         START SCREEN
+    ========================================== -->
+
+    <div id="startScreen" class="start-screen">
+
+        <div class="start-stars"></div>
+
+        <div class="start-glow"></div>
+
+
+        <!-- Animated Heart -->
+
+        <div class="start-heart">
+
+            <span>♥</span>
+
+        </div>
+
+
+        <p class="start-small">
+            A little surprise is waiting for you
+        </p>
+
+
+        <h1 class="start-title">
+
+            For
+            <span>Israt Jaha Mim</span>
+
+        </h1>
+
+
+        <p class="start-subtitle">
+
+            Something special is about to begin...
+
+        </p>
+
+
+        <!-- START BUTTON -->
+
+        <button
+            id="startBtn"
+            class="start-btn"
+            type="button"
+        >
+
+            <span>START</span>
+
+            <b>♥</b>
+
+        </button>
+
+
+        <p class="start-note">
+
+            Turn up your volume 🎵
+
+        </p>
+
+    </div>
+
+
+
+    <!-- =========================================
+         MAIN WEBSITE
+    ========================================== -->
+
+    <div
+        id="mainWebsite"
+        class="main-website hidden"
+    >
+
+        <!-- Aurora -->
+
+        <div class="aurora aurora-1"></div>
+
+        <div class="aurora aurora-2"></div>
+
+
+        <!-- Floating hearts -->
+
+        <canvas id="heartCanvas"></canvas>
+
+
+        <!-- =====================================
+             MAIN
+        ====================================== -->
+
+        <main class="app">
+
+            <section class="card" id="card">
+
+                <div class="card-shine"></div>
+
+                <div class="glow"></div>
+
+
+                <!-- =================================
+                     INTRO
+                ================================== -->
+
+                <div class="intro" id="intro">
+
+
+                    <!-- Neon Heart -->
+
+                    <div class="neon-heart">
+
+                        <span>♥</span>
+
+                    </div>
+
+
+                    <p class="eyebrow">
+
+                        A little secret from my heart
+
+                    </p>
+
+
+                    <h1>
+
+                        Hey,
+                        <span>Israt Jaha Mim</span>
+                        <b>♥</b>
+
+                    </h1>
+
+
+                    <div class="divider">
+
+                        <i></i>
+
+                        <span>✦</span>
+
+                        <i></i>
+
+                    </div>
+
+
+                    <!-- Typing text -->
+
+                    <p
+                        id="message"
+                        class="message"
+                    ></p>
+
+
+                    <!-- Open Heart -->
+
+                    <button
+                        id="revealBtn"
+                        class="reveal-btn"
+                        type="button"
+                    >
+
+                        <span>
+                            Open My Heart
+                        </span>
+
+                        <span class="btn-heart">
+                            ♥
+                        </span>
+
+                    </button>
+
+
+                    <!-- Finger scroll -->
+
+                    <div
+                        class="scroll-hint"
+                        id="scrollHint"
+                    >
+
+                        <div class="finger">
+
+                            <div class="finger-dot"></div>
+
+                        </div>
+
+
+                        <span>
+                            Swipe / Scroll
+                        </span>
+
+
+                        <small>
+                            to reveal something special
+                        </small>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- =================================
+                     FINAL REVEAL
+                ================================== -->
+
+                <div
+                    id="finalReveal"
+                    class="final-reveal hidden"
+                >
+
+                    <div class="burst"></div>
+
+
+                    <div class="neon-heart final-heart">
+
+                        <span>♥</span>
+
+                    </div>
+
+
+                    <p class="final-label">
+
+                        from my heart, to yours
+
+                    </p>
+
+
+                    <h2>
+
+                        Israt Jaha Mim,
+
+                        <br>
+
+                        <span>
+                            I Love You.
+                        </span>
+
+                    </h2>
+
+
+                    <p class="question">
+
+                        Will you be mine?
+
+                    </p>
+
+
+                    <div class="love-line">
+
+                        <span></span>
+
+                        <b>♥</b>
+
+                        <span></span>
+
+                    </div>
+
+
+                    <p class="closing">
+
+                        Whatever your answer is,
+                        I just wanted you to know
+                        that you are truly special to me.
+                        Some feelings are too beautiful
+                        to keep hidden forever. ❤️
+
+                    </p>
+
+
+                    <p class="forever">
+
+                        made with a little courage
+                        &amp; a lot of love
+
+                    </p>
+
+                </div>
+
+            </section>
+
+        </main>
+
+    </div>
+
+
+
+    <!-- =========================================
+         MUSIC
+    ========================================== -->
+
+    <audio
+        id="bgMusic"
+        loop
+        preload="auto"
+    >
+
+        <source
+            src="music.mp3"
+            type="audio/mpeg"
+        >
+
+    </audio>
+
+
+    <!-- JavaScript -->
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
