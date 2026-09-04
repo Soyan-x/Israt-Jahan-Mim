@@ -1,5 +1,5 @@
 /* =========================================================
-   💗 LOVE REVEAL WEBSITE
+   ❤️ LOVE REVEAL WEBSITE
 ========================================================= */
 
 
@@ -8,6 +8,63 @@
 ========================================================= */
 
 const LOVE_NAME = "Israt Jahan Mim";
+
+
+/* =========================================================
+   NAME SYSTEM
+========================================================= */
+
+const startName =
+    document.getElementById("startName");
+
+const mainName =
+    document.getElementById("mainName");
+
+const finalName =
+    document.getElementById("finalName");
+
+const pageTitle =
+    document.getElementById("pageTitle");
+
+const metaDescription =
+    document.getElementById("metaDescription");
+
+
+/* Put name everywhere */
+
+if (startName) {
+    startName.textContent = LOVE_NAME;
+}
+
+if (mainName) {
+    mainName.textContent = LOVE_NAME;
+}
+
+if (finalName) {
+    finalName.textContent = LOVE_NAME;
+}
+
+
+/* Browser tab */
+
+if (pageTitle) {
+
+    pageTitle.textContent =
+        `For ${LOVE_NAME} ❤️`;
+
+}
+
+
+/* Meta description */
+
+if (metaDescription) {
+
+    metaDescription.setAttribute(
+        "content",
+        `A special message from my heart to ${LOVE_NAME} ❤️`
+    );
+
+}
 
 
 /* =========================================================
@@ -48,79 +105,16 @@ const ctx =
 
 
 /* =========================================================
-   NAME ELEMENTS
-========================================================= */
-
-const startName =
-    document.getElementById("startName");
-
-const mainName =
-    document.getElementById("mainName");
-
-const finalName =
-    document.getElementById("finalName");
-
-const pageTitle =
-    document.getElementById("pageTitle");
-
-const metaDescription =
-    document.getElementById("metaDescription");
-
-
-/* =========================================================
-   💗 APPLY NAME EVERYWHERE
-========================================================= */
-
-if (startName) {
-    startName.textContent = LOVE_NAME;
-}
-
-if (mainName) {
-    mainName.textContent = LOVE_NAME;
-}
-
-if (finalName) {
-    finalName.textContent = LOVE_NAME;
-}
-
-
-/* Browser Tab */
-
-if (pageTitle) {
-
-    pageTitle.textContent =
-        `For ${LOVE_NAME} ❤️`;
-
-}
-
-
-/* Website Description */
-
-if (metaDescription) {
-
-    metaDescription.setAttribute(
-        "content",
-        `A special message from my heart to ${LOVE_NAME} ❤️`
-    );
-
-}
-
-
-/* =========================================================
    VARIABLES
 ========================================================= */
 
-let websiteStarted =
-    false;
+let websiteStarted = false;
 
-let revealed =
-    false;
+let revealed = false;
 
-let particles =
-    [];
+let particles = [];
 
-let touchStartY =
-    0;
+let touchStartY = 0;
 
 
 /* =========================================================
@@ -130,14 +124,10 @@ let touchStartY =
 async function startWebsite() {
 
     if (websiteStarted) {
-
         return;
-
     }
 
-
-    websiteStarted =
-        true;
+    websiteStarted = true;
 
 
     /* -----------------------------------------
@@ -148,8 +138,7 @@ async function startWebsite() {
 
         try {
 
-            bgMusic.volume =
-                0.65;
+            bgMusic.volume = 0.65;
 
             await bgMusic.play();
 
@@ -177,14 +166,11 @@ async function startWebsite() {
 
     if (startScreen) {
 
-        startScreen.style.opacity =
-            "0";
+        startScreen.style.opacity = "0";
 
-        startScreen.style.visibility =
-            "hidden";
+        startScreen.style.visibility = "hidden";
 
-        startScreen.style.pointerEvents =
-            "none";
+        startScreen.style.pointerEvents = "none";
 
     }
 
@@ -214,6 +200,8 @@ async function startWebsite() {
             }
 
 
+            /* Start typing */
+
             startTypingMessage();
 
         },
@@ -241,12 +229,10 @@ if (startBtn) {
    TYPING MESSAGE
 ========================================================= */
 
-async function startTypingMessage() {
+function startTypingMessage() {
 
     if (!message) {
-
         return;
-
     }
 
 
@@ -256,20 +242,15 @@ async function startTypingMessage() {
         "but today I don't want to hide it anymore. ❤️";
 
 
-    let index =
-        0;
+    let index = 0;
 
 
-    message.innerHTML =
-        "";
+    message.innerHTML = "";
 
 
     function type() {
 
-        if (
-            index <
-            text.length
-        ) {
+        if (index < text.length) {
 
             message.innerHTML =
                 text.substring(
@@ -291,8 +272,7 @@ async function startTypingMessage() {
 
         else {
 
-            message.textContent =
-                text;
+            message.textContent = text;
 
         }
 
@@ -311,9 +291,7 @@ async function startTypingMessage() {
 function resizeCanvas() {
 
     if (!canvas || !ctx) {
-
         return;
-
     }
 
 
@@ -432,9 +410,7 @@ function createParticle(
 function drawHeart(p) {
 
     if (!ctx) {
-
         return;
-
     }
 
 
@@ -542,9 +518,7 @@ function drawHeart(p) {
 function animateParticles() {
 
     if (!ctx) {
-
         return;
-
     }
 
 
@@ -625,7 +599,7 @@ function animateParticles() {
 
 
 /* =========================================================
-   CREATE BACKGROUND HEARTS
+   BACKGROUND HEARTS
 ========================================================= */
 
 particles =
@@ -649,22 +623,20 @@ animateParticles();
 async function revealLove() {
 
     if (revealed) {
-
         return;
-
     }
 
 
-    revealed =
-        true;
+    revealed = true;
 
 
-    /* Disable button */
+    /* -----------------------------------------
+       DISABLE BUTTON
+    ----------------------------------------- */
 
     if (revealBtn) {
 
-        revealBtn.disabled =
-            true;
+        revealBtn.disabled = true;
 
         revealBtn.style.pointerEvents =
             "none";
@@ -678,7 +650,9 @@ async function revealLove() {
     }
 
 
-    /* Hide scroll hint */
+    /* -----------------------------------------
+       HIDE SCROLL HINT
+    ----------------------------------------- */
 
     if (scrollHint) {
 
@@ -691,7 +665,9 @@ async function revealLove() {
     }
 
 
-    /* Make sure music is playing */
+    /* -----------------------------------------
+       MUSIC
+    ----------------------------------------- */
 
     if (bgMusic) {
 
@@ -713,12 +689,16 @@ async function revealLove() {
     }
 
 
-    /* Dramatic pause */
+    /* -----------------------------------------
+       DRAMATIC PAUSE
+    ----------------------------------------- */
 
     await wait(700);
 
 
-    /* Hide intro */
+    /* -----------------------------------------
+       HIDE INTRO
+    ----------------------------------------- */
 
     const intro =
         document.getElementById("intro");
@@ -741,7 +721,9 @@ async function revealLove() {
     await wait(800);
 
 
-    /* Show final */
+    /* -----------------------------------------
+       SHOW FINAL
+    ----------------------------------------- */
 
     if (finalReveal) {
 
@@ -752,12 +734,16 @@ async function revealLove() {
     }
 
 
-    /* Heart explosion */
+    /* -----------------------------------------
+       HEART EXPLOSION
+    ----------------------------------------- */
 
     createHeartBurst();
 
 
-    /* Scroll */
+    /* -----------------------------------------
+       SCROLL TO FINAL
+    ----------------------------------------- */
 
     setTimeout(
         () => {
@@ -872,9 +858,7 @@ document.addEventListener(
 function createHeartBurst() {
 
     if (!canvas) {
-
         return;
-
     }
 
 
@@ -951,5 +935,5 @@ console.log(
 );
 
 console.log(
-    `💌 Love message prepared for ${LOVE_NAME}`
+    `💌 Prepared for: ${LOVE_NAME}`
 );
