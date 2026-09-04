@@ -1,6 +1,13 @@
 /* =========================================================
-   LOVE REVEAL WEBSITE
+   💗 LOVE REVEAL WEBSITE
 ========================================================= */
+
+
+/* =========================================================
+   💗 CHANGE NAME HERE ONLY
+========================================================= */
+
+const LOVE_NAME = "Israt Jahan Mim";
 
 
 /* =========================================================
@@ -41,6 +48,65 @@ const ctx =
 
 
 /* =========================================================
+   NAME ELEMENTS
+========================================================= */
+
+const startName =
+    document.getElementById("startName");
+
+const mainName =
+    document.getElementById("mainName");
+
+const finalName =
+    document.getElementById("finalName");
+
+const pageTitle =
+    document.getElementById("pageTitle");
+
+const metaDescription =
+    document.getElementById("metaDescription");
+
+
+/* =========================================================
+   💗 APPLY NAME EVERYWHERE
+========================================================= */
+
+if (startName) {
+    startName.textContent = LOVE_NAME;
+}
+
+if (mainName) {
+    mainName.textContent = LOVE_NAME;
+}
+
+if (finalName) {
+    finalName.textContent = LOVE_NAME;
+}
+
+
+/* Browser Tab */
+
+if (pageTitle) {
+
+    pageTitle.textContent =
+        `For ${LOVE_NAME} ❤️`;
+
+}
+
+
+/* Website Description */
+
+if (metaDescription) {
+
+    metaDescription.setAttribute(
+        "content",
+        `A special message from my heart to ${LOVE_NAME} ❤️`
+    );
+
+}
+
+
+/* =========================================================
    VARIABLES
 ========================================================= */
 
@@ -75,7 +141,7 @@ async function startWebsite() {
 
 
     /* -----------------------------------------
-       MUSIC STARTS IMMEDIATELY
+       MUSIC
     ----------------------------------------- */
 
     if (bgMusic) {
@@ -106,7 +172,7 @@ async function startWebsite() {
 
 
     /* -----------------------------------------
-       Hide START SCREEN
+       HIDE START SCREEN
     ----------------------------------------- */
 
     if (startScreen) {
@@ -124,7 +190,7 @@ async function startWebsite() {
 
 
     /* -----------------------------------------
-       Show MAIN WEBSITE
+       SHOW MAIN WEBSITE
     ----------------------------------------- */
 
     setTimeout(
@@ -147,8 +213,6 @@ async function startWebsite() {
 
             }
 
-
-            /* Start typing */
 
             startTypingMessage();
 
@@ -187,11 +251,8 @@ async function startTypingMessage() {
 
 
     const text =
-
         "There’s something I’ve been wanting to tell you for a while… " +
-
         "Maybe I never found the perfect words, " +
-
         "but today I don't want to hide it anymore. ❤️";
 
 
@@ -211,14 +272,10 @@ async function startTypingMessage() {
         ) {
 
             message.innerHTML =
-
                 text.substring(
                     0,
                     index + 1
-                )
-
-                +
-
+                ) +
                 '<span class="typing-cursor"></span>';
 
 
@@ -270,14 +327,12 @@ function resizeCanvas() {
     canvas.width =
         window.innerWidth * dpr;
 
-
     canvas.height =
         window.innerHeight * dpr;
 
 
     canvas.style.width =
         window.innerWidth + "px";
-
 
     canvas.style.height =
         window.innerHeight + "px";
@@ -457,7 +512,6 @@ function drawHeart(p) {
 
 
     const color =
-
         `hsl(${hue}, 100%, 70%)`;
 
 
@@ -570,7 +624,9 @@ function animateParticles() {
 }
 
 
-/* Create background hearts */
+/* =========================================================
+   CREATE BACKGROUND HEARTS
+========================================================= */
 
 particles =
 
@@ -657,7 +713,7 @@ async function revealLove() {
     }
 
 
-    /* Small dramatic pause */
+    /* Dramatic pause */
 
     await wait(700);
 
@@ -728,7 +784,7 @@ async function revealLove() {
 
 
 /* =========================================================
-   BUTTON
+   REVEAL BUTTON
 ========================================================= */
 
 if (revealBtn) {
@@ -833,26 +889,17 @@ function createHeartBurst() {
 
 
         p.x =
-
             window.innerWidth / 2 +
-
-            (Math.random() - 0.5)
-            * 260;
+            (Math.random() - 0.5) * 260;
 
 
         p.y =
-
             window.innerHeight / 2 +
-
-            (Math.random() - 0.5)
-            * 180;
+            (Math.random() - 0.5) * 180;
 
 
         p.speed =
-
-            Math.random() *
-            2.5 +
-            1;
+            Math.random() * 2.5 + 1;
 
 
         p.opacity =
@@ -901,4 +948,8 @@ console.log(
 
 console.log(
     "👆 Swipe Reveal Ready"
+);
+
+console.log(
+    `💌 Love message prepared for ${LOVE_NAME}`
 );
